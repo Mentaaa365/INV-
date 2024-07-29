@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identify Greater or Lesser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/mayor.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="./img/logo2.png" alt="logo">
+            <h2>Escolar</h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4><span>Menu</span><div class="menu-separator"></div></h4>
+            <li>
+                <a href="inicio.html">
+                    <i class="fa fa-home"></i> 
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="mayor.html">
+                    <i class="fa fa-font"></i> 
+                    Mayor o menor
+                </a>
+            </li>
+            <li>
+                <a href="secuencia.html">
+                    <i class="fa fa-calculator"></i>
+                     Secuencias
+                </a>
+            </li>
+            <li>
+                <a href="decisiones.html">
+                    <i class="fa fa-paw"></i>
+                     Decisiones
+                </a>
+            </li>
+            <li>
+                <a href="contacto.html">
+                    <i class="fa fa-envelope"></i> 
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cogs"></i> 
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-flag"></i> 
+                    Flag
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bell"></i> 
+                    Notification
+                </a>
+            </li>
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="login.html"><i class="fa fa-user-md"></i> Profile</a></li>
+            <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+        </ul>
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="./img/user.jpeg" alt="Profile">
+                <div class="user-details">
+                    <h3>Limones Fc</h3>
+                    <span>Web Developer</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <div class="container">
+            <h1>Identifica cuál número es mayor o menor</h1>
+            <div class="question" id="question">¿Cuál número es mayor, 8 o 5?</div>
+            <div class="options">
+                <button onclick="checkAnswer(true)">8</button>
+                <button onclick="checkAnswer(false)">5</button>
+            </div>
+            <button id="new-question" onclick="generateExample()">Nueva Pregunta</button>
+            <div class="result" id="result"></div>
+            <div class="explanation" id="explanation" style="display: none;">
+             
+            </div>
+        </div>
+    </main>
+    <script src="./js/mayor.js"></script>
+</body>
+</html>

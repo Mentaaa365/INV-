@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    display: flex;
+    background: #161a2d;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .sidebar-header img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    font-weight: 500;
+    margin: 10px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-seperator {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background-color: #fff;
+    transform: translateY(-50%) scaleX(1);
+    transition: transform 0.2s;
+    transform-origin: right;
+}
+
+.sidebar:hover .sidebar-links .menu-seperator {
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.sidebar-links {
+    list-style: none;
+    height: 80%;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 15px;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+    color: #007bff;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.user-account {
+    padding: 2px 10px;
+    margin-top: auto;
+    margin-left: -10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.user-profile img {
+    border: 2px solid #fff;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-profile h3 {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+.user-detail {
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.sidebar:hover .user-account {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+/* Main Content */
+main {
+    margin-left: 85px;
+    padding: 20px;
+    transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover + main {
+    margin-left: 260px;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-left: 85px;
+    transition: margin-left 0.4s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+
+#matematicas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto 0;
+    max-width: 600px;
+    text-align: center;
+}
+
+#matematicas h2 {
+    background: #007bbf;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin: 0 85px;
+    transition: margin 0.4s ease;
+}
+
+.tabla-suma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabla-suma h3 {
+    margin-bottom: 10px;
+}
+
+#suma-interactiva {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.tabla-suma input, .tabla-suma button {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.tabla-suma button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-suma button:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #d9534f;
+}
+
+footer {
+    background: #007bff;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+.response {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

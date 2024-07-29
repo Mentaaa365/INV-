@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación Inicial</title>
+    <link rel="stylesheet" href="./css/secuencia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="./img/logo2.png" alt="logo">
+            <h2>Escolar</h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4>
+                <span>Menú</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="inicio.html">
+                    <i class="fa fa-home"></i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="mayor.html">
+                    <i class="fa fa-font"></i>
+                    Mayor o Menor
+                </a>
+            </li>
+            <li>
+                <a href="secuencia.html">
+                    <i class="fa fa-calculator"></i>
+                    Secuencias
+                </a>
+            </li>
+            <li>
+                <a href="decisiones.html">
+                    <i class="fa fa-paw"></i>
+                    Decisiones
+                </a>
+            </li>
+            <li>
+                <a href="contacto.html">
+                    <i class="fa fa-envelope"></i>
+                    Contacto
+                </a>
+            </li>
+            <h4> 
+                <span>Cuenta</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="login.html">
+                    <i class="fa fa-user-md"></i>
+                    Perfil
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cogs"></i>
+                    Configuración
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-sign-out"></i>
+                    Cerrar sesión
+                </a>
+            </li>
+        </ul>
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="./img/user.jpeg" alt="Profile">
+                <div class="user-details">
+                    <h3>Limones Fc</h3>
+                    <span>Desarrolladores Web</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Completa la secuencia</h1>
+        <div class="sequence-game">
+            <p>Completa la secuencia de números:</p>
+            <div id="sequence-container">
+                <!-- Secuencia generada aquí -->
+            </div>
+            <form id="sequence-form">
+                <!-- Opciones generadas aquí -->
+            </form>
+            <button id="sequence-submit" type="submit">Comprobar</button>
+            <div id="result"></div>
+            <div id="explanation"></div>
+            <button id="new-sequence">Nueva Secuencia</button>
+        </div>
+    </main>
+
+    <script src="./js/secuencia.js"></script>
+</body>
+</html>

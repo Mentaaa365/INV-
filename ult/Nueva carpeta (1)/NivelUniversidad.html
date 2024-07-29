@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Nivel Universidad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/math-game.css">
+    <link rel="stylesheet" href="css/stylem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="./img/logo2.png" alt="logo">
+                <h2>Universidad</h2>
+            </div>
+            <ul class="sidebar-links">
+                <h4>
+                    <span>Menú</span>
+                    <div class="menu-separator"></div>
+                </h4>
+                <li>
+                    <a href="inicio.html">
+                        <i class="fa fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li><a href="#calculadora"><i class="icon">C</i> <span>Calculadora</span></a></li>
+                <li><a href="#conversiones"><i class="icon">C</i> <span>Conversiones</span></a></li>
+                <li><a href="#analisis-texto"><i class="icon">A</i> <span>Análisis de Texto</span></a></li>
+                <li><a href="#manejo-arreglos"><i class="icon">M</i> <span>Manejo de Arreglos</span></a></li>
+                <li>
+                    <a href="contacto.html">
+                        <i class="fa fa-envelope"></i>
+                        Contacto
+                    </a>
+                </li>
+                <h4> 
+                    <span>Cuenta</span>
+                    <div class="menu-separator"></div>
+                </h4>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-user-md"></i>
+                        Perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-cogs"></i>
+                        Configuración
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out"></i>
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+            <div class="user-account">
+                <div class="user-profile">
+                    <img src="./img/user.jpeg" alt="Profile">
+                    <div class="user-details">
+                        <h3>Limones Fc</h3>
+                        <span>Desarrolladores Web</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    <div class="content">
+        <header>
+            <h1>Ejercicio Nivel Universidad</h1>
+        </header>
+
+        <main>
+            <section id="calculadora">
+                <h2>Calculadora Interactiva</h2>
+                <input type="number" id="num1" placeholder="Número 1">
+                <input type="number" id="num2" placeholder="Número 2">
+                <button onclick="calculate('add')">Sumar</button>
+                <button onclick="calculate('subtract')">Restar</button>
+                <button onclick="calculate('multiply')">Multiplicar</button>
+                <button onclick="calculate('divide')">Dividir</button>
+                <p id="calc-result"></p>
+            </section>
+
+            <section id="conversiones">
+                <h2>Conversiones de Números</h2>
+                <input type="text" id="binary" placeholder="Número Binario">
+                <button onclick="convert('binaryToHex')">Binario a Hexadecimal</button>
+                <button onclick="convert('binaryToDecimal')">Binario a Decimal</button>
+                <input type="text" id="hexadecimal" placeholder="Número Hexadecimal">
+                <button onclick="convert('hexToBinary')">Hexadecimal a Binario</button>
+                <input type="text" id="decimal" placeholder="Número Decimal">
+                <button onclick="convert('decimalToBinary')">Decimal a Binario</button>
+                <p id="conv-result"></p>
+                <p id="conv-explanation"></p>
+                <p id="conv-process"></p>
+                <img id="conversion-table" style="display:none;" alt="Tabla de Conversión">
+            </section>
+
+            <section id="analisis-texto">
+                <h2>Análisis de Texto</h2>
+                <textarea id="text" placeholder="Ingresa el texto aquí"></textarea>
+                <button onclick="analyzeText()">Analizar Texto</button>
+                <p id="text-result"></p>
+                
+                <h2>Invertir Cadena de Texto</h2>
+                <textarea id="invert-text" placeholder="Ingresa el texto aquí"></textarea>
+                <button onclick="invertText()">Invertir Texto</button>
+                <p id="invert-result"></p>
+                
+                <h2>Comparar Frases</h2>
+                <textarea id="phrase1" placeholder="Ingresa la primera frase aquí"></textarea>
+                <textarea id="phrase2" placeholder="Ingresa la segunda frase aquí"></textarea>
+                <button onclick="comparePhrases()">Comparar Frases</button>
+                <p id="compare-result"></p>
+            </section>
+
+            <section id="manejo-arreglos">
+                <h2>Manejo de Arreglos</h2>
+                <input type="text" id="array-input" placeholder="Ingresa números separados por comas">
+                <button onclick="analyzeArray('primes')">Obtener Números Primos</button>
+                <button onclick="analyzeArray('perfects')">Obtener Números Perfectos</button>
+                <button onclick="analyzeArray('stats')">Obtener Promedio y Moda</button>
+                <p id="array-result"></p>
+                <p id="array-explanation"></p>
+                <p id="array-process"></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Plataforma Interactiva de Programación</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff, #2a5298);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    display: flex;
+    background: #161a2d;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .sidebar-header img {
+    border-radius: 50%;
+    width: 42px;
+}
+
+.sidebar .sidebar-header {
+    align-items: center;
+    display: flex;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    white-space: nowrap;
+    font-weight: 500;
+    position: relative;
+    margin: 10px 0;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    transform: translateY(-50%);
+    transform: scaleX(1);
+    transition: 0.2s;
+    transform-origin: right;
+}
+
+.sidebar-links {
+    list-style: none;
+    height: 80%;
+    margin-top: 20px;
+    scrollbar-width: none;
+    overflow-y: auto;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0 20px;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+    color: #161a2d;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.user-account {
+    padding: 2px 10px;
+    margin-top: auto;
+    margin-left: -10px;
+}
+
+.user-profile {
+    align-items: center;
+    display: flex;
+    color: #fff;
+}
+
+.user-profile img {
+    border: 2px solid #fff;
+    width: 42px;
+    border-radius: 50%;
+}
+
+.user-profile h3 {
+    font-weight: 600;
+    font-size: 0.775rem;
+    color: #bcc1cf;
+}
+
+.user-details {
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.main-content {
+    margin-left: 85px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 85px);
+    height: 100vh;
+    transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+}
+
+.slide-wrapper {
+    overflow: hidden;
+    max-width: 1200px; 
+    margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f6630e;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover {
+    background: rgba(240, 240, 240, 0.1);
+    border: 1px solid #bf7d7d;
+    color: #fff;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .slide-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .swiper-slide-button {
+        display: none;
+    }
+}

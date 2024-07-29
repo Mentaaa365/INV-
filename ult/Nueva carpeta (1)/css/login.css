@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background: #161a2d;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    display: flex;
+    background: #161a2d;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .sidebar-header img {
+    border-radius: 50%;
+    width: 42px;
+}
+
+.sidebar .sidebar-header {
+    align-items: center;
+    display: flex;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    white-space: nowrap;
+    font-weight: 500;
+    position: relative;
+    margin: 10px 0;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-seperator {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    transform: translateY(-50%);
+    transform: scaleX(1);
+    transition: 0.2;
+    transform-origin: right;
+}
+
+.sidebar-hover .sidebar-links .menu-seperator {
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.sidebar-links {
+    list-style: none;
+    height: 80%;
+    margin-top: 20px;
+    scrollbar-width: none;
+    overflow-y: auto;
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0 20px;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2 ease;
+}
+
+.sidebar-links li a:hover {
+    color: #161a2d;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.user-account {
+    padding: 2px 10px;
+    margin-top: auto;
+    margin-left: -10px;
+}
+
+.user-profile {
+    align-items: center;
+    display: flex;
+    color: #fff;
+}
+
+.user-profile img {
+    border: 2px solid #fff;
+    width: 42px;
+    border-radius: 50%;
+}
+
+.user-profile h3 {
+    font-weight: 600;
+    font-size: 0.775rem;
+    color: #bcc1cf;
+}
+
+.user-detail {
+    margin-left: 23px;
+    white-space: now;
+}
+
+.sidebar-hover .user-account {
+    background: #0c0000;
+    border-radius: 4px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.container .form {
+    display: none;
+}
+
+#registration-form {
+    display: none;
+}
+
+.container .form.active {
+    display: block;
+}
+
+.form header {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form input {
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #000;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form a {
+    font-size: 16px;
+    color: #161a2d;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form input.button {
+    color: #fff;
+    background: #161a2d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.form input.button:hover {
+    background: #000;
+}
+
+.signup {
+    font-size: 17px;
+    text-align: center;
+}
+
+.signup label {
+    color: #161a2d;
+    cursor: pointer;
+}
+
+.signup label:hover {
+    text-decoration: underline;
+}
